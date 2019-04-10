@@ -1,24 +1,20 @@
 <template>
-  <section class="container">
-    <div>
-      <app-logo/>
-      <div>
-        account page
-        <nuxt-link to="/">Home page</nuxt-link>
-      </div>
-    </div>
-  </section>
+  <AppDefault>
+    <template slot="app-main">
+      2
+    </template>
+  </AppDefault>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import AppDefault from '~/components/templates/app-default.vue'
 
 export default {
   components: {
-    AppLogo
+    AppDefault
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>
