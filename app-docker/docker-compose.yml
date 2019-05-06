@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - ${NGINX_PORT}:80
+    volumes:
+      - ${APP_CODE_PATH_HOST}:/usr/share/nginx/html

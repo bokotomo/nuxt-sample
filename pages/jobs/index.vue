@@ -1,12 +1,20 @@
 <template>
-  <AppDefault>
+  <AppDefault
+    type="white"
+  >
     <template slot="app-main">
-      <p class="title">
-        Pickup
-      </p>
-      <p class="title">
-        Trend
-      </p>
+
+      <div
+        v-for="job in jobs"
+        :key="job.id"
+      >
+        <nuxt-link
+          :to="`jobs/${job.id}`"
+        >
+          {{ job.name }}
+        </nuxt-link>
+      </div>
+
     </template>
   </AppDefault>
 </template>
@@ -21,25 +29,11 @@ export default {
   },
 
   computed: {
-    ...mapState('user', [ 'name' ]),
-
-    value  () {
-      return this.$store.state.name
-    }
+    ...mapState('job', [ 'jobs' ]),
   },
-
-  methods: {
-    inc () {
-      alert()
-    }
-  }
 }
 </script>
 
 <style lang="scss" scoped>
-.title {
-  color: #fff;
-  font-size: 24px;
-  padding: 20px 0;
-}
+
 </style>

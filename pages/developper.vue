@@ -2,8 +2,11 @@
   <AppDefault>
     <template slot="app-main">
 
+      <p>
+        開発者一覧
+      </p>
       <nuxt-link
-        to="/users/1"
+        to="/u/tomo"
       >
         tomo1
       </nuxt-link>

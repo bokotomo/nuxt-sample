@@ -1,13 +1,19 @@
 <template>
   <AppDefault>
     <template slot="app-main">
-
-      <nuxt-link
-        to="/user/1"
-      >
-        tomo1
-      </nuxt-link>
-
+      <p class="title">
+        Pickup
+      </p>
+      <div>
+        <nuxt-link
+          to="/posts/2"
+        >
+          制作物2
+        </nuxt-link>
+      </div>
+      <p class="title">
+        Trend
+      </p>
     </template>
   </AppDefault>
 </template>
@@ -23,5 +29,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.title {
+  color: #fff;
+  font-size: 24px;
+  padding: 20px 0;
+}
 </style>

@@ -1,4 +1,5 @@
 <script>
+import { mapState } from 'vuex'
 import HeaderLeftMenu from '~/components/molecules/common/header-left-menu.vue'
 import HeaderRightMenu from '~/components/molecules/common/header-right-menu.vue'
 
@@ -9,13 +10,19 @@ export default {
     HeaderLeftMenu,
     HeaderRightMenu,
   },
+
+  computed: {
+    ...mapState('auth', [ 'isSignin' ]),
+  },
 }
 </script>
 
 <template>
   <div class="header">
     <HeaderLeftMenu />
-    <HeaderRightMenu />
+    <HeaderRightMenu
+      :isSignin="isSignin"
+    />
   </div>
 </template>
 

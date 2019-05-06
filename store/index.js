@@ -1,22 +1,31 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import user from './user'
+import auth from './modules/auth'
+import user from './modules/user'
+import post from './modules/post'
+import job from './modules/job'
 
 Vue.use(Vuex)
 
 export default () => {
   return new Vuex.Store({
     state: {
-      name: "tomo"
+
     },
+
     mutations: {
 
     },
+
     actions: {
 
     },
+
     modules: {
-      user
+      auth,
+      user,
+      post,
+      job,
     }
   })
 }

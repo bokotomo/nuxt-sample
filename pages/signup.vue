@@ -22,12 +22,12 @@ export default {
       <div class="login">
 
         <div class="head">
-          <p>
+          <p class="head-text">
             Register and connect<br>
             with many game creators.
           </p>
           <div class="head-icon">
-            <span>ICON</span>
+            <img :src="require('~/assets/images/game-creator-icon1.png')" />
           </div>
         </div>
 
@@ -104,10 +104,19 @@ export default {
     display: flex;
     justify-content: space-between;
 
+    &-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     &-icon {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      img {
+        width: 80px;
+      }
     }
   }
   form {

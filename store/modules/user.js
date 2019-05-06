@@ -6,7 +6,7 @@ export default {
     // APIができるまではモックで代替。
     users: [
       {
-        id: 1,
+        id: 'tomo',
         name: 'tomo',
         location: 'tokyo',
         thumbnail: require('~/assets/images/user1.jpg'),
@@ -19,7 +19,7 @@ export default {
         ],
       },
       {
-        id: 2,
+        id: 'boko1234',
         name: 'fukumoto',
         location: 'tokyo2',
         thumbnail: require('~/assets/images/user2.png'),

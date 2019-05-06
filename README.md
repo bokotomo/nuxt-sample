@@ -21,4 +21,10 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
-# nuxt-sample
+# productionで確認する
+下のコマンドを実行したら、「 http://localhost:8010 」で確認。
+
+```
+cd app-docker
+docker-compose up -d
+```

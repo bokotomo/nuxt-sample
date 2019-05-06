@@ -5,7 +5,10 @@
       <!-- 最上部 -->
       <div class="user-info">
         <div class="user-info-left">
-          <div class="names">
+          <nuxt-link
+            :to="`/u/${id}`"
+            class="names"
+          >
             <div
               class="image"
               :style="{
@@ -15,26 +18,14 @@
             <p class="name">
               {{ user.name }}
             </p>
-          </div>
-          <div class="tags">
-            {{ userTags }}
-          </div>
-        </div>
-        <div class="user-info-right">
-          <p class="title">
-            Total good number
-          </p>
-          <p class="good">
-            {{ user.totalGood }}
-          </p>
+          </nuxt-link>
         </div>
       </div>
 
-      <!-- ユーザ説明 -->
-      <div class="user-description">
-        {{ user.description }}
+      <!-- ユーザ作品 -->
+      <div class="user-creations">
+        作品
       </div>
-
     </template>
   </AppDefault>
 </template>
@@ -50,17 +41,12 @@ export default {
 
   data () {
     return {
-      id: +this.$route.params.id,
+      id: this.$route.params.id,
     }
   },
 
   computed: {
     ...mapState('user', [ 'user' ]),
-
-    userTags () {
-      if(!this.user.tags) return ''
-      return this.user.tags.join(', ')
-    }
   },
 
   mounted () {
@@ -75,9 +61,9 @@ export default {
     },
   },
 
-  // 数値でなければこのページへ入れない。
+  // 「記号なしの半角英数字」でなければこのページへ入れない。
   validate ({ params }) {
-    return /^\d+$/.test(params.id)
+    return /^[a-zA-Z0-9]+$/.test(params.id)
   }
 }
 </script>
@@ -92,6 +78,7 @@ export default {
     &-left {
       .names {
         display: flex;
+        color: #fff;
 
         .name {
           line-height: 80px;
@@ -106,26 +93,9 @@ export default {
           background-position: 50% 50%;
         }
       }
-      .tags {
-        padding-top: 10px;
-      }
-    }
-    &-right {
-      background: #fff;
-      width: 240px;
-      border-radius: 5px;
-      text-align: center;
-      color: #0A192C;
-
-      .title {
-        margin-top: 40px;
-      }
-      .good {
-        color: #D55555;
-      }
     }
   }
-  &-description {
+  &creations {
     margin-top: 40px;
     padding: 10px;
     background: #3C3E41;

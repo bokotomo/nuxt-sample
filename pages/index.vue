@@ -1,12 +1,23 @@
 <template>
   <AppDefault>
     <template slot="app-main">
+
       <p class="title">
         Pickup
       </p>
+
+      <div>
+        <nuxt-link
+          to="/posts/1"
+        >
+          制作物1
+        </nuxt-link>
+      </div>
+
       <p class="title">
         Trend
       </p>
+
     </template>
   </AppDefault>
 </template>

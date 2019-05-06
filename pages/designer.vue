@@ -2,10 +2,13 @@
   <AppDefault>
     <template slot="app-main">
 
+      <p>
+        デザイナー一覧
+      </p>
       <nuxt-link
-        to="/users/2"
+        to="/u/boko1234"
       >
-        tomo2
+        boko1234
       </nuxt-link>
 
     </template>
