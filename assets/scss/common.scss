@@ -1,0 +1,21 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: helvetica, arial, 'hiragino kaku gothic pro', meiryo, 'ms pgothic', sans-serif;
+  height: 100%;
+  margin: 0;
+
+  #__nuxt, #__layout {
+    height: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: #27caf3;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

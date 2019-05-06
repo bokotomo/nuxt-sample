@@ -19,6 +19,20 @@ export default {
   components: {
     AppDefault,
   },
+
+  computed: {
+    ...mapState('user', [ 'name' ]),
+
+    value  () {
+      return this.$store.state.name
+    }
+  },
+
+  methods: {
+    inc () {
+      alert()
+    }
+  }
 }
 </script>
 

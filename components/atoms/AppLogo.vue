@@ -6,6 +6,7 @@
 
 <style lang="scss" scoped>
 .logo {
-  color: #fff;
+  font-size: 20px;
+  color: #E7BB52;
 }
 </style>

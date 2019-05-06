@@ -1,18 +1,18 @@
 <template>
   <AppDefault>
     <template slot="app-main">
-      <p class="title">
-        Pickup
-      </p>
-      <p class="title">
-        Trend
-      </p>
+
+      <nuxt-link
+        to="/users/2"
+      >
+        tomo2
+      </nuxt-link>
+
     </template>
   </AppDefault>
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import AppDefault from '~/components/templates/app-default.vue'
 
 export default {
@@ -23,9 +23,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.title {
-  color: #fff;
-  font-size: 24px;
-  padding: 20px 0;
-}
 </style>

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'HeaderMenu'
+  name: 'HeaderRightMenu',
 }
 </script>
 
@@ -8,15 +8,9 @@ export default {
   <div class="menu">
     <nuxt-link
       class="menu-item"
-      to="/"
+      to="/signin"
     >
-      ホーム
-    </nuxt-link>
-    <nuxt-link
-      class="menu-item"
-      to="/account"
-    >
-      マイページ
+      Sign in
     </nuxt-link>
   </div>
 </template>
@@ -27,7 +21,13 @@ export default {
 
   &-item {
     color: #fff;
-    margin-left: 10px;
+    padding: 0 10px;
+
+    &:hover {
+      color: #e6c71b;
+      border-bottom: 2px solid #e6c71b;
+      text-decoration: none;
+    }
   }
 }
 </style>
