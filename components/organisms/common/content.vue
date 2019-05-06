@@ -49,6 +49,7 @@ export default {
 <style lang="scss" scoped>
 .content {
   flex: 1 1 auto;
+  height: 100%;
 
   &-black {
     flex: 1 1 auto;
@@ -70,6 +71,7 @@ export default {
   }
   &-signin {
     flex: 1 1 auto;
+    margin-top: -60px;
     height: 100%;
     background-size: cover;
     background-attachment: fixed;

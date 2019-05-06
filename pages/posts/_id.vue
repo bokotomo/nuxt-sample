@@ -13,6 +13,13 @@
           <p>
             {{ post.comment }}
           </p>
+
+          <div
+            class="post-info-image"
+            :style="{
+              backgroundImage: 'url(' + post.image1 + ')'
+            }"
+          />
         </div>
 
         <!-- ユーザ説明 -->
@@ -123,6 +130,15 @@ export default {
     background: #3C3E41;
     border-radius: 5px;
     border: 1px solid #323437;
+    padding: 20px 0;
+
+    &-image {
+      width: 600px;
+      height: 350px;
+      background-size: cover;
+      background-position: 50% 50%;
+      margin: auto;
+    }
   }
   &-description {
     margin-top: 40px;

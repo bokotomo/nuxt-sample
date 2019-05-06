@@ -18,22 +18,33 @@ export default {
 </script>
 
 <template>
-  <div class="header">
-    <HeaderLeftMenu />
-    <HeaderRightMenu
-      :isSignin="isSignin"
-    />
+  <div>
+    <div class="header">
+      <HeaderLeftMenu />
+      <HeaderRightMenu
+        :isSignin="isSignin"
+      />
+    </div>
+    <div class="header-under" />
   </div>
 </template>
 
 <style lang="scss" scoped>
+$height: 60px;
+
 .header {
-  height: 60px;
-  line-height: 60px;
+  position: fixed;
+  width: 100%;
+  height: $height;
+  line-height: $height;
   background: #323232;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   box-shadow: 0px 0px 20px 0px #1b355a45;
+
+  &-under {
+    height: $height;
+  }
 }
 </style>

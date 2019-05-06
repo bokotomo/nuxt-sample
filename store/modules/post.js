@@ -17,6 +17,11 @@ export default {
         isGood: true,
         thumbnail: require('~/assets/images/user1.jpg'),
         description: 'Hallo everbody,I love listening to podcast, it’s a habit that I formed since 1 years ago. So, I dedicate to make one. This is one some screens podcast app for ios. Please let me know what you think on the comment section! ',
+        image1: require('~/assets/images/game_creator_content1.jpg'),
+        image2: require('~/assets/images/game_creator_content2.jpg'),
+        image3: require('~/assets/images/game_creator_content2.jpg'),
+        image4: require('~/assets/images/game_creator_content2.jpg'),
+        image5: require('~/assets/images/game_creator_content2.jpg'),
         comments: [
           {
             id: 1,
@@ -40,6 +45,11 @@ export default {
         isGood: false,
         thumbnail: require('~/assets/images/user2.png'),
         description: 'Hallo everbody,I love listening to podcast, it’s a habit that I formed since 1 years ago. So, I dedicate to make one. This is one some screens podcast app for ios. Please let me know what you think on the comment section! ',
+        image1: require('~/assets/images/game_creator_content2.jpg'),
+        image2: require('~/assets/images/game_creator_content1.jpg'),
+        image3: require('~/assets/images/game_creator_content1.jpg'),
+        image4: require('~/assets/images/game_creator_content1.jpg'),
+        image5: require('~/assets/images/game_creator_content1.jpg'),
         comments: [
           {
             id: 1,
